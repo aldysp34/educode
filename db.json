@@ -1,0 +1,137 @@
+{
+    "content":[
+        {
+            "id": 1,
+            "title": "Loops in Java",
+            "desc": "Belajar struktur kontrol perulangan menggunakan bahasa pemrograman Java.",
+            "typeId" : 1,
+            "learning":[
+                {
+                    "learningId": 1,
+                    "learningTitle":"Pengantar Java",
+                    "learningDesc" : "Bagaimana cara menggunakan bahasa pemrograman Java?",
+                    "lesson":[
+                        {
+                            "lessonId": 1,
+                            "lessonTItle":"",
+                            "lessonText": "",
+                            "lessonImg":"",
+                            "lessonSnippet":"",
+                            "lessonVideo":"",
+                            "lessonNotes":"",
+                            "quiz":[
+                                {
+                                    "quizId": 1,
+                                    "quizSoal": "",
+                                    "quizOption":[
+                                        {
+                                            "optionId":1,
+                                            "optionDesc":""
+                                        },
+                                        {
+                                            "optionId":2,
+                                            "optionDesc":""
+                                        },
+                                        {
+                                            "optionId":3,
+                                            "optionDesc":""
+                                        }
+                            ]
+                                }
+                            ]
+                        }
+                    ]                  
+                },
+                {
+                    "learningId": 2,
+                    "learningTitle":"Pengantar Perulangan",
+                    "learningDesc" : "Apa itu perulangan dan apa saja jenisnya?"
+                },
+                {
+                    "learningId": 3,
+                    "learningTitle":"Counted Loop",
+                    "learningDesc" : "Perulangan yang bisa dihitung, apa itu ya?"
+                },
+                {
+                    "learningId": 4,
+                    "learningTitle":"Uncounted Loop",
+                    "learningDesc" : "Perulangan yang tidak bisa dihitung, apa itu ya?"
+                },
+                {
+                    "learningId": 5,
+                    "learningTitle":"Nested Loop",
+                    "learningDesc" : "Perulangan di dalam perulangan?"
+                },
+                {
+                    "learningId": 6,
+                    "learningTitle":"Quiz for You",
+                    "learningDesc" : "Seberapa besar pemahaman dalam perulangan?"
+                }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Loops in Python",
+            "desc": "Belajar struktur kontrol perulangan menggunakan bahasa pemrograman Python.",
+            "typeId" : 1,
+            "learning":[
+                {
+                    "learningId": 1,
+                    "learningTitle":"Pengantar Python",
+                    "learningDesc" : "Bagaimana cara menggunakan bahasa pemrograman Python?",
+                    "lesson":[
+                        {
+                            "lessonId": 1,
+                            "lessonTItle":"",
+                            "lessonText": "",
+                            "lessonImg":"",
+                            "lessonSnippet":"",
+                            "lessonVideo":"",
+                            "lessonNotes":""
+                        },
+                        {
+                            "lessonId": 2,
+                            "lessonTItle":"",
+                            "lessonText": "",
+                            "lessonImg":"",
+                            "lessonSnippet":"",
+                            "lessonVideo":"",
+                            "lessonNotes":""
+                        }
+                    ]
+                },
+                {
+                    "learningId": 2,
+                    "learningTitle":"Pengantar Perulangan",
+                    "learningDesc" : "Apa itu perulangan?"
+                },
+                {
+                    "learningId": 3,
+                    "learningTitle": "Jenis-Jenis Perulangan",
+                    "learningDesc": "Apa saja jenis-jenis perulangan?"
+                }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Pre-Test",
+            "desc": "Tes kemampuan dasar sebelum melakukan pembelajaran.",
+            "typeId" : 2
+          },
+          {
+            "id": 4,
+            "title": "Post-Test",
+            "desc": "Tes kemampuan setelah melakukan pembelajaran.",
+            "typeId" : 2
+          }
+    ],
+
+    "users" : [
+        {
+            "id": 1,
+            "nama": "Ghirah Madani",
+            "email": "ghirahmadanis@gmail.com",
+            "password": "gmadani123"
+        }
+    ]
+}
