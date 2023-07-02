@@ -11,7 +11,6 @@ import (
 	"github.com/golang-jwt/jwt/v5"
 	echojwt "github.com/labstack/echo-jwt/v4"
 	"github.com/labstack/echo/v4"
-	"github.com/labstack/echo/v4/middleware"
 )
 
 type config struct {
@@ -22,8 +21,6 @@ func main() {
 	database.Init()
 
 	e := echo.New()
-	e.Use(middleware.Logger())
-	e.Use(middleware.Recover())
 
 	config := config{create_config()}
 
@@ -43,14 +40,21 @@ func main() {
 	{
 		class.Use(echojwt.WithConfig(config.configure))
 
-		class.GET("/", controller.GetClasses)
+		class.GET("", controller.GetClasses)
+		class.GET("/", controller.GetClass)
+		class.POST("/new-class", controller.CreateNewClass)
+		class.PUT("/update-class", controller.UpdateClass)
+		class.DELETE("/delete-class", controller.DeleteClass)
 	}
 
 	learning := class.Group("/learning")
 	{
 		learning.Use(echojwt.WithConfig(config.configure))
 
-		learning.GET("/:class_id", controller.GetLearningByClass)
+		learning.GET("", controller.GetLearningByClass)
+		learning.GET("/", controller.GetLearning)
+		learning.POST("/new-learning", controller.CreateNewLearning)
+		learning.PUT("/update-learning", controller.UpdateLearning)
 	}
 	lesson := learning.Group("/lesson")
 	{
