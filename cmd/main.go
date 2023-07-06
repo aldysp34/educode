@@ -20,7 +20,8 @@ type config struct {
 
 func main() {
 	// Initialize Database
-	database.Init(os.Getenv("DATABASE_URL"))
+	dsn := os.Getenv("DB_USERNAME") + ":" + os.Getenv("DB_PASSWORD") + "@tcp(" + os.Getenv("DB_HOST") + ":" + os.Getenv("DB_PORT") + ")/" + os.Getenv("DB_NAME")
+	database.Init(dsn)
 
 	// Initialize echo framework
 	e := echo.New()
