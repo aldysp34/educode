@@ -8,10 +8,10 @@ import (
 	"github.com/aldysp34/educode/controller"
 	"github.com/aldysp34/educode/controller/auth"
 	"github.com/aldysp34/educode/database"
-	"github.com/gofiber/fiber/middleware"
 	"github.com/golang-jwt/jwt/v5"
 	echojwt "github.com/labstack/echo-jwt/v4"
 	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 )
 
 type config struct {
