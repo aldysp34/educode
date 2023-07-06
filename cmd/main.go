@@ -20,7 +20,7 @@ type config struct {
 
 func main() {
 	// Initialize Database
-	database.Init()
+	database.Init(os.Getenv("DATABASE_URL"))
 
 	// Initialize echo framework
 	e := echo.New()
