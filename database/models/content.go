@@ -21,6 +21,7 @@ type Lesson struct {
 	Is_active bool
 	Title     string        `json:"lesson_title"`
 	Text      string        `json:"lesson_text"`
+	Snippet   string        `json:"lesson_snippet"`
 	Files     []FileContent `gorm:"foreignKey:LessID;references:LessonID;constraint:OnUpdate:CASCADE, OnDelete:CASCADE"`
 	Quizzies  []Quiz        `gorm:"foreignKey:LessID;references:LessonID;constraint:OnUpdate:CASCADE, OnDelete:CASCADE"`
 }
@@ -30,6 +31,7 @@ type FileContent struct {
 	Filetype string `json:"filetype"`
 	Filename string `json:"filename"`
 	Filesize string `json:"filesize"`
+	Filepath string `json:"filepath"`
 	LessID   uint
 }
 

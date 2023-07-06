@@ -28,5 +28,7 @@ func Init() {
 		&models.QuizOption{},
 	)
 
+	db.Exec("ALTER TABLE file_contents ADD filepath varchar(128);")
+	db.Exec("ALTER TABLE lessons ADD snippet longtext")
 	return
 }

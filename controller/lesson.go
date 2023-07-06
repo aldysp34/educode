@@ -10,15 +10,56 @@ import (
 	"gorm.io/gorm/clause"
 )
 
-type LessonStruct struct {
-	Title string `json:"lesson_title"`
-	Text  string `json:"lesson_text"`
+type LessonJSON struct {
+	Title   string `json:"lesson_title" form:"lesson_title"`
+	Text    string `json:"lesson_text" form:"lesson_text"`
+	Snippet string `json:"lesson_snippet" form:"lesson_snippet"`
 }
+
+type LessonStruct struct {
+	Title string
+	Text  string
+	Quiz  []models.Quiz
+	Media []models.FileContent
+}
+
 type QuizStruct struct {
+	QuizID  uint
+	LessID  uint
+	Options []models.QuizOption
+	Soal    string
+}
+
+type QuizOptions struct {
+	QuizOptionID uint
+	Desc         string
+	Is_true      bool
+	KuisID       uint
+}
+type successCheck struct {
+	IsSuccess bool
+	Message   string
+}
+
+func (lesson *LessonStruct) AddMedia(media models.FileContent) []models.FileContent {
+	lesson.Media = append(lesson.Media, media)
+	return lesson.Media
+}
+
+func (lesson *LessonStruct) AddQuiz(quiz models.Quiz) []models.Quiz {
+	lesson.Quiz = append(lesson.Quiz, quiz)
+
+	return lesson.Quiz
+}
+
+func (quiz *QuizStruct) AddOptions(option models.QuizOption) []models.QuizOption {
+	quiz.Options = append(quiz.Options, option)
+
+	return quiz.Options
 }
 
 func GetLessonsByLearningID(c echo.Context) error {
-	id := c.Param("learning_id")
+	id := c.QueryParam("learning_id")
 
 	learning_id, err := strconv.Atoi(id)
 	if err != nil {
@@ -45,12 +86,40 @@ func GetLessonsByLearningID(c echo.Context) error {
 	})
 }
 
+func GetLesson(c echo.Context) error {
+	id := c.QueryParam("lesson_id")
+
+	learning_id, err := strconv.Atoi(id)
+	if err != nil {
+		return c.JSON(http.StatusInternalServerError, echo.Map{
+			"status":  http.StatusInternalServerError,
+			"message": err,
+		})
+	}
+
+	uint_learning_id := uint(learning_id)
+
+	var lesson []models.Lesson
+	if result := database.Db.Where(&models.Lesson{LessonID: uint_learning_id}).Preload(clause.Associations).Preload("Quizzies." + clause.Associations).First(&lesson); result.Error != nil {
+		return c.JSON(http.StatusInternalServerError, echo.Map{
+			"status":  http.StatusInternalServerError,
+			"message": result.Error,
+		})
+	}
+	return c.JSON(http.StatusOK, echo.Map{
+		"status":  http.StatusOK,
+		"message": "data retrieve",
+		"payload": lesson,
+	})
+
+}
+
 func CreateNewLesson(c echo.Context) error {
 	Lock.Lock()
 	defer Lock.Unlock()
 
 	var newLearning models.Lesson
-	id := c.Param("learning_id")
+	id := c.QueryParam("learning_id")
 
 	learning_id, err := strconv.Atoi(id)
 	if err != nil {
@@ -58,17 +127,20 @@ func CreateNewLesson(c echo.Context) error {
 	}
 	uint_learning_id := uint(learning_id)
 
-	lessonStruct := new(LessonStruct)
-	if err := c.Bind(lessonStruct); err != nil {
+	lessonJSON := new(LessonJSON)
+	if err := c.Bind(lessonJSON); err != nil {
 		return c.JSON(http.StatusBadRequest, echo.Map{
 			"status":  http.StatusBadRequest,
 			"message": "Can't bind request JSON",
 		})
 	}
+	// fmt.Printf("JSON: %+v\nData type: %s\n", lessonJSON.Quiz, reflect.TypeOf(lessonJSON))
+	// fmt.Println("uint learning id: ", uint_learning_id)
 
-	newLearning.LessonID = uint_learning_id
-	newLearning.Title = lessonStruct.Title
-	newLearning.Text = lessonStruct.Text
+	newLearning.LearnID = uint_learning_id
+	newLearning.Title = lessonJSON.Title
+	newLearning.Text = lessonJSON.Text
+	newLearning.Snippet = lessonJSON.Snippet
 
 	if result := database.Db.Create(&newLearning); result.Error != nil {
 		return c.JSON(http.StatusInternalServerError, echo.Map{
@@ -76,8 +148,6 @@ func CreateNewLesson(c echo.Context) error {
 			"message": result.Error,
 		})
 	}
-
-	// Create Quiz and File
 
 	return c.JSON(http.StatusOK, echo.Map{
 		"status":  http.StatusOK,
@@ -90,9 +160,9 @@ func UpdateLesson(c echo.Context) error {
 	Lock.Lock()
 	defer Lock.Unlock()
 
-	lessonStruct := new(LessonStruct)
+	lessonJSON := new(LessonJSON)
 	var updatedLearning models.Lesson
-	id := c.Param("learning_id")
+	id := c.QueryParam("lesson_id")
 	learning_id, err := strconv.Atoi(id)
 
 	if err != nil {
@@ -109,15 +179,15 @@ func UpdateLesson(c echo.Context) error {
 		})
 	}
 
-	if err := c.Bind(lessonStruct); err != nil {
+	if err := c.Bind(lessonJSON); err != nil {
 		return c.JSON(http.StatusBadRequest, echo.Map{
 			"status":  http.StatusBadRequest,
 			"message": "Can't bind request JSON",
 		})
 	}
 
-	updatedLearning.Text = lessonStruct.Text
-	updatedLearning.Title = lessonStruct.Title
+	updatedLearning.Text = lessonJSON.Text
+	updatedLearning.Title = lessonJSON.Title
 
 	if err := database.Db.Save(&updatedLearning); err.Error != nil {
 		return c.JSON(http.StatusInternalServerError, echo.Map{
@@ -139,7 +209,7 @@ func DeleteLesson(c echo.Context) error {
 	Lock.Lock()
 	defer Lock.Unlock()
 
-	id := c.Param("learning_id")
+	id := c.QueryParam("lesson_id")
 	learning_id, err := strconv.Atoi(id)
 
 	if err != nil {
