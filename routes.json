@@ -1,0 +1,747 @@
+[
+  {
+    "method": "DELETE",
+    "path": "/api/class/learning/lesson/quiz/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "POST",
+    "path": "/api/user",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "POST",
+    "path": "/api/class",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PROPFIND",
+    "path": "/api/class/learning",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "TRACE",
+    "path": "/api/class/learning",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "TRACE",
+    "path": "/api/class/learning/lesson/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "POST",
+    "path": "/api/class/learning/lesson/quiz",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PROPFIND",
+    "path": "/api/class/learning/lesson/quiz",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/api/class/learning/lesson/files/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/class",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/class",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "CONNECT",
+    "path": "/api/class/learning",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "GET",
+    "path": "/api/class/learning/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/class/learning/lesson/quiz",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/user/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "REPORT",
+    "path": "/api/class/learning/lesson/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/class/learning/lesson/delete-lesson",
+    "name": "github.com/aldysp34/educode/controller.DeleteLesson"
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/api/class/learning/lesson/quiz",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/api/class/learning/lesson/quiz/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/user",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "CONNECT",
+    "path": "/api/user/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/api/class/learning",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "CONNECT",
+    "path": "/api/class/learning/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "GET",
+    "path": "/api/class/learning/lesson",
+    "name": "github.com/aldysp34/educode/controller.GetLessonsByLearningID"
+  },
+  {
+    "method": "POST",
+    "path": "/api/auth/register",
+    "name": "github.com/aldysp34/educode/controller/auth.Register"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/user/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "REPORT",
+    "path": "/api/class",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "HEAD",
+    "path": "/api/class/learning/lesson/files/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PROPFIND",
+    "path": "/api/class/learning/lesson/files/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "HEAD",
+    "path": "/api/class/learning/lesson",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "GET",
+    "path": "/api/class/learning/lesson/files/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "REPORT",
+    "path": "/api/user",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PROPFIND",
+    "path": "/api/user/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "GET",
+    "path": "/api/class",
+    "name": "github.com/aldysp34/educode/controller.GetClasses"
+  },
+  {
+    "method": "REPORT",
+    "path": "/api/class/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "GET",
+    "path": "/api/class/",
+    "name": "github.com/aldysp34/educode/controller.GetClass"
+  },
+  {
+    "method": "POST",
+    "path": "/api/class/learning/lesson/quiz/new-quiz",
+    "name": "github.com/aldysp34/educode/controller.CreateQuiz"
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/api/class/learning/lesson/files",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "POST",
+    "path": "/api/class/learning/lesson/files",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "TRACE",
+    "path": "/api/class/learning/lesson",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "HEAD",
+    "path": "/api/class/learning/lesson/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "CONNECT",
+    "path": "/api/class/learning/lesson/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "POST",
+    "path": "/api/class/learning/lesson/new-lesson",
+    "name": "github.com/aldysp34/educode/controller.CreateNewLesson"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/class/learning/lesson/quiz",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "HEAD",
+    "path": "/api/class/learning/lesson/quiz",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "HEAD",
+    "path": "/api/class/learning/lesson/quiz/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "TRACE",
+    "path": "/api/user",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "POST",
+    "path": "/api/class/learning/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "GET",
+    "path": "/api/class/learning/",
+    "name": "github.com/aldysp34/educode/controller.GetLearning"
+  },
+  {
+    "method": "PROPFIND",
+    "path": "/api/class/learning/lesson",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/class/learning/lesson/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/class/learning/lesson/files",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/class/learning/lesson/files/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "HEAD",
+    "path": "/api/class/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/class/learning",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "REPORT",
+    "path": "/api/class/learning/lesson",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "GET",
+    "path": "/api/class/learning/lesson/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "CONNECT",
+    "path": "/api/class/learning/lesson/files",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "TRACE",
+    "path": "/api/user/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/class/update-class",
+    "name": "github.com/aldysp34/educode/controller.UpdateClass"
+  },
+  {
+    "method": "GET",
+    "path": "/api/class/learning/lesson/quiz/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "HEAD",
+    "path": "/api/class/learning/lesson/files",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/api/class/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/class/delete-class",
+    "name": "github.com/aldysp34/educode/controller.DeleteClass"
+  },
+  {
+    "method": "POST",
+    "path": "/api/class/learning",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/api/class",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "REPORT",
+    "path": "/api/class/learning/lesson/quiz",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PROPFIND",
+    "path": "/api/class/learning/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "GET",
+    "path": "/api/class/learning/lesson/",
+    "name": "github.com/aldysp34/educode/controller.GetLesson"
+  },
+  {
+    "method": "PROPFIND",
+    "path": "/api/user",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "CONNECT",
+    "path": "/api/class/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/class/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "POST",
+    "path": "/api/class/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/class/learning/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "HEAD",
+    "path": "/api/class/learning/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "CONNECT",
+    "path": "/api/class/learning/lesson/quiz/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "GET",
+    "path": "/api/user/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "HEAD",
+    "path": "/api/user/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "CONNECT",
+    "path": "/api/class",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/class/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "POST",
+    "path": "/api/class/new-class",
+    "name": "github.com/aldysp34/educode/controller.CreateNewClass"
+  },
+  {
+    "method": "GET",
+    "path": "/api/class/learning/lesson/files",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/class/learning/lesson/files/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "HEAD",
+    "path": "/api/user",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/api/user/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/api/class/learning/lesson/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "CONNECT",
+    "path": "/api/class/learning/lesson/quiz",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/class/learning/lesson",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "GET",
+    "path": "/api/user/",
+    "name": "github.com/aldysp34/educode/controller.GetUser"
+  },
+  {
+    "method": "PROPFIND",
+    "path": "/api/class",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "CONNECT",
+    "path": "/api/class/learning/lesson",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/class/learning/lesson",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/class/learning/lesson",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "POST",
+    "path": "/api/class/learning/lesson/files/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/class",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/class/learning/lesson/update-lesson",
+    "name": "github.com/aldysp34/educode/controller.UpdateLesson"
+  },
+  {
+    "method": "TRACE",
+    "path": "/api/class/learning/lesson/quiz",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PROPFIND",
+    "path": "/api/class/learning/lesson/quiz/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "REPORT",
+    "path": "/api/class/learning/lesson/files",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/class/learning/update-learning",
+    "name": "github.com/aldysp34/educode/controller.UpdateLearning"
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/api/class/learning/lesson",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "GET",
+    "path": "/api/class/learning/lesson/quiz",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "GET",
+    "path": "/api/class/learning/lesson/files/asset",
+    "name": "github.com/aldysp34/educode/controller.GetFile"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/user/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/class/learning",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PROPFIND",
+    "path": "/api/class/learning/lesson/files",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/api/user",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/user",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "GET",
+    "path": "/api/class/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/class/learning/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "TRACE",
+    "path": "/api/class/learning/lesson/files",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "CONNECT",
+    "path": "/api/user",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/class/learning",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "HEAD",
+    "path": "/api/class/learning",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "POST",
+    "path": "/api/class/learning/lesson/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "REPORT",
+    "path": "/api/class/learning/lesson/quiz/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/class/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PROPFIND",
+    "path": "/api/class/learning/lesson/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/class/learning/lesson/quiz/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "CONNECT",
+    "path": "/api/class/learning/lesson/files/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "HEAD",
+    "path": "/api/class",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "REPORT",
+    "path": "/api/class/learning/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/class/learning/lesson/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "POST",
+    "path": "/api/class/learning/lesson/quiz/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "REPORT",
+    "path": "/api/class/learning/lesson/files/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/api/class/learning/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/class/learning/lesson/files",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "TRACE",
+    "path": "/api/class/learning/lesson/files/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/class/learning/lesson/files/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "POST",
+    "path": "/api/class/learning/lesson/files/new-files",
+    "name": "github.com/aldysp34/educode/controller.CreateFiles"
+  },
+  {
+    "method": "GET",
+    "path": "/api/user",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "REPORT",
+    "path": "/api/user/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "TRACE",
+    "path": "/api/class/learning/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/class/learning/lesson/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/class/learning/lesson/files",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/user",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "POST",
+    "path": "/api/user/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PROPFIND",
+    "path": "/api/class/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "GET",
+    "path": "/api/class/learning",
+    "name": "github.com/aldysp34/educode/controller.GetLearningByClass"
+  },
+  {
+    "method": "POST",
+    "path": "/api/class/learning/new-learning",
+    "name": "github.com/aldysp34/educode/controller.CreateNewLearning"
+  },
+  {
+    "method": "POST",
+    "path": "/api/class/learning/lesson",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/class/learning/lesson/quiz",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/class/learning/lesson/quiz/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "POST",
+    "path": "/api/auth/login",
+    "name": "github.com/aldysp34/educode/controller/auth.Login"
+  },
+  {
+    "method": "TRACE",
+    "path": "/api/class",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "TRACE",
+    "path": "/api/class/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "REPORT",
+    "path": "/api/class/learning",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/class/learning/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "TRACE",
+    "path": "/api/class/learning/lesson/quiz/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  }
+]

@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"log"
+	"net/http"
 	"os"
 
 	"github.com/aldysp34/educode/controller"
@@ -116,6 +117,12 @@ func create_config() echojwt.Config {
 			return new(auth.JWTClaims)
 		},
 		SigningKey: []byte(os.Getenv("SECRET_KEY")),
+		ErrorHandler: func(c echo.Context, err error) error {
+			return c.JSON(http.StatusUnauthorized, echo.Map{
+				"status":  http.StatusUnauthorized,
+				"message": "Unauthorized",
+			})
+		},
 	}
 
 	return config
