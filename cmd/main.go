@@ -29,6 +29,7 @@ func main() {
 	/* Middleware Logger and Recover */
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
+	e.Use(middleware.CORS())
 	/* End Middleware */
 
 	// initialize jwt middleware configure
