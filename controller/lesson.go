@@ -14,6 +14,7 @@ type LessonJSON struct {
 	Title   string `json:"lesson_title" form:"lesson_title"`
 	Text    string `json:"lesson_text" form:"lesson_text"`
 	Snippet string `json:"lesson_snippet" form:"lesson_snippet"`
+	Notes   string `json:"lesson_notes" form:"lesson_notes"`
 }
 
 type LessonStruct struct {
@@ -141,6 +142,7 @@ func CreateNewLesson(c echo.Context) error {
 	newLearning.Title = lessonJSON.Title
 	newLearning.Text = lessonJSON.Text
 	newLearning.Snippet = lessonJSON.Snippet
+	newLearning.Notes = lessonJSON.Notes
 
 	if result := database.Db.Create(&newLearning); result.Error != nil {
 		return c.JSON(http.StatusInternalServerError, echo.Map{

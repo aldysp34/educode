@@ -31,5 +31,6 @@ func Init(connection string) {
 
 	db.Exec("ALTER TABLE file_contents ADD filepath varchar(128);")
 	db.Exec("ALTER TABLE lessons ADD snippet longtext")
+	db.Exec("ALTER TABLE lessons ADD notes longtext")
 	return
 }

@@ -22,6 +22,7 @@ type Lesson struct {
 	Title     string        `json:"lesson_title"`
 	Text      string        `json:"lesson_text"`
 	Snippet   string        `json:"lesson_snippet"`
+	Notes     string        `json:"lesson_notes"`
 	Files     []FileContent `gorm:"foreignKey:LessID;references:LessonID;constraint:OnUpdate:CASCADE, OnDelete:CASCADE"`
 	Quizzies  []Quiz        `gorm:"foreignKey:LessID;references:LessonID;constraint:OnUpdate:CASCADE, OnDelete:CASCADE"`
 }
