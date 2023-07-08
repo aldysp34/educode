@@ -15,6 +15,8 @@ type quiz struct {
 }
 
 func CreateQuiz(c echo.Context) error {
+	Lock.Lock()
+	defer Lock.Unlock()
 	id := c.QueryParam("lesson_id")
 
 	learning_id, err := strconv.Atoi(id)
@@ -47,5 +49,106 @@ func CreateQuiz(c echo.Context) error {
 		"status":  http.StatusCreated,
 		"message": "Create Quiz Successfully",
 		"payload": quiz,
+	})
+}
+
+func GetQuiz(c echo.Context) error {
+	Lock.Lock()
+	defer Lock.Unlock()
+	id := c.QueryParam("quiz_id")
+	quiz_id, err := strconv.Atoi(id)
+	if err != nil {
+		return c.JSON(http.StatusInternalServerError, echo.Map{
+			"status":  http.StatusInternalServerError,
+			"message": err,
+		})
+	}
+
+	uint_quiz_id := uint(quiz_id)
+
+	var quiz models.Quiz
+	if result := database.Db.Where(&models.Quiz{QuizID: uint_quiz_id}).First(&quiz); result.Error != nil {
+		return c.JSON(http.StatusInternalServerError, echo.Map{
+			"status":  http.StatusInternalServerError,
+			"message": result.Error,
+		})
+	}
+
+	return c.JSON(http.StatusOK, echo.Map{
+		"status":  http.StatusOK,
+		"message": "data retrieve",
+		"payload": quiz,
+	})
+
+}
+
+func UpdateQuiz(c echo.Context) error {
+	Lock.Lock()
+	defer Lock.Unlock()
+	id := c.QueryParam("quiz_id")
+	quiz_id, err := strconv.Atoi(id)
+	if err != nil {
+		return c.JSON(http.StatusInternalServerError, echo.Map{
+			"status":  http.StatusInternalServerError,
+			"message": err,
+		})
+	}
+	quiz_json := new(quiz)
+
+	if err := c.Bind(quiz_json); err != nil {
+		return c.JSON(http.StatusInternalServerError, echo.Map{
+			"status":  http.StatusInternalServerError,
+			"message": err,
+		})
+	}
+	uint_quiz_id := uint(quiz_id)
+
+	var quiz models.Quiz
+	if result := database.Db.Where(&models.Quiz{QuizID: uint_quiz_id}).First(&quiz); result.Error != nil {
+		return c.JSON(http.StatusInternalServerError, echo.Map{
+			"status":  http.StatusInternalServerError,
+			"message": result.Error,
+		})
+	}
+
+	quiz.Soal = quiz_json.Soal
+
+	if result := database.Db.Save(&quiz); result.Error != nil {
+		return c.JSON(http.StatusInternalServerError, echo.Map{
+			"status":  http.StatusInternalServerError,
+			"message": result.Error,
+		})
+	}
+
+	return c.JSON(http.StatusOK, echo.Map{
+		"status":  http.StatusOK,
+		"message": "Update Quiz SuccessFully",
+		"payload": quiz,
+	})
+}
+
+func DeleteQuiz(c echo.Context) error {
+	Lock.Lock()
+	defer Lock.Unlock()
+	id := c.QueryParam("quiz_id")
+	quiz_id, err := strconv.Atoi(id)
+	if err != nil {
+		return c.JSON(http.StatusInternalServerError, echo.Map{
+			"status":  http.StatusInternalServerError,
+			"message": err,
+		})
+	}
+	uint_quiz_id := uint(quiz_id)
+
+	if result := database.Db.Delete(&models.Quiz{}, uint_quiz_id); result.Error != nil {
+		return c.JSON(http.StatusInternalServerError, echo.Map{
+			"status":  http.StatusInternalServerError,
+			"message": result.Error,
+		})
+	}
+
+	return c.JSON(http.StatusNoContent, echo.Map{
+		"status":  http.StatusNoContent,
+		"message": "Delete Quiz Successfully",
 	})
 }

@@ -68,6 +68,7 @@ func main() {
 		learning.GET("/", controller.GetLearning)
 		learning.POST("/new-learning", controller.CreateNewLearning)
 		learning.PUT("/update-learning", controller.UpdateLearning)
+		learning.DELETE("/delete-learning", controller.DeleteLearning)
 	}
 	lesson := learning.Group("/lesson")
 	{
@@ -85,6 +86,9 @@ func main() {
 		quiz.Use(echojwt.WithConfig(config.configure))
 
 		quiz.POST("/new-quiz", controller.CreateQuiz)
+		quiz.GET("/", controller.GetQuiz)
+		quiz.PUT("/update-quiz", controller.UpdateQuiz)
+		quiz.DELETE("/delete-quiz", controller.DeleteQuiz)
 	}
 
 	files := lesson.Group("/files")
