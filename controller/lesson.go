@@ -190,6 +190,8 @@ func UpdateLesson(c echo.Context) error {
 
 	updatedLearning.Text = lessonJSON.Text
 	updatedLearning.Title = lessonJSON.Title
+	updatedLearning.Snippet = lessonJSON.Snippet
+	updatedLearning.Notes = lessonJSON.Notes
 
 	if err := database.Db.Save(&updatedLearning); err.Error != nil {
 		return c.JSON(http.StatusInternalServerError, echo.Map{
