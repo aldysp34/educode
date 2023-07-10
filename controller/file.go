@@ -56,9 +56,10 @@ func CreateFiles(c echo.Context) error {
 			splitExt := strings.Split(fileType, "/")
 			extName := splitExt[1]
 
-			fileName := "uploads/" + strconv.FormatInt(time.Now().Unix(), 10) + "." + extName
+			fileName := strconv.FormatInt(time.Now().Unix(), 10) + "." + extName
+			filePath := "uploads/" + fileName
 
-			err = ioutil.WriteFile(fileName, fileByte, 0777)
+			err = ioutil.WriteFile(filePath, fileByte, 0777)
 			if err != nil {
 				isSuccess.IsSuccess = false
 				isSuccess.Message = err.Error()
@@ -69,6 +70,7 @@ func CreateFiles(c echo.Context) error {
 				media.Filesize = strconv.FormatInt(fileSize, 10)
 				media.Filetype = fileType
 				media.LessID = uint_learning_id
+				media.Filepath = filePath
 
 				fileStruct.AddMedia(media)
 			}
