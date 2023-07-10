@@ -38,7 +38,20 @@ func CreateFiles(c echo.Context) error {
 	uint_learning_id := uint(learning_id)
 
 	form, err := c.MultipartForm()
+	if err != nil {
+		return c.JSON(http.StatusInternalServerError, echo.Map{
+			"status":  http.StatusInternalServerError,
+			"message": err,
+		})
+	}
 	files := form.File["files"]
+	if len(files) == 0 {
+		return c.JSON(http.StatusUnprocessableEntity, echo.Map{
+			"status":  http.StatusUnprocessableEntity,
+			"message": "No File Uploaded",
+		})
+	}
+
 	var isSuccess successCheck
 	isSuccess.IsSuccess = true
 
