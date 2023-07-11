@@ -7,6 +7,7 @@ import (
 	"github.com/aldysp34/educode/database"
 	"github.com/aldysp34/educode/database/models"
 	"github.com/labstack/echo/v4"
+	"gorm.io/gorm/clause"
 )
 
 type quiz struct {
@@ -67,7 +68,7 @@ func GetQuiz(c echo.Context) error {
 	uint_quiz_id := uint(quiz_id)
 
 	var quiz models.Quiz
-	if result := database.Db.Where(&models.Quiz{QuizID: uint_quiz_id}).First(&quiz); result.Error != nil {
+	if result := database.Db.Where(&models.Quiz{QuizID: uint_quiz_id}).Preload(clause.Associations).First(&quiz); result.Error != nil {
 		return c.JSON(http.StatusInternalServerError, echo.Map{
 			"status":  http.StatusInternalServerError,
 			"message": result.Error,
