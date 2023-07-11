@@ -41,6 +41,7 @@ func main() {
 	authentication := api.Group("/auth")
 	authentication.POST("/login", auth.Login)
 	authentication.POST("/register", auth.Register)
+	api.GET("/asset", controller.GetFile)
 
 	user := api.Group("/user")
 	{
