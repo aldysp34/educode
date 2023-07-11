@@ -111,8 +111,8 @@ func main() {
 	/* End Routes List */
 
 	// Start the server
-	port := ":" + os.Getenv("PORT")
-	e.Logger.Fatal(e.Start(port))
+	// port := ":" + os.Getenv("PORT")
+	e.Logger.Fatal(e.Start(":3000"))
 
 }
 
