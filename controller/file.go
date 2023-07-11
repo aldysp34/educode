@@ -123,7 +123,7 @@ func GetFile(c echo.Context) error {
 func DeleteFile(c echo.Context) error {
 	path := c.QueryParam("path")
 
-	if result := database.Db.Delete(&models.FileContent{Filepath: path}); result.Error != nil {
+	if result := database.Db.Where("filepath = ?", path).Delete(&models.FileContent{}); result.Error != nil {
 		return c.JSON(http.StatusInternalServerError, echo.Map{
 			"status":  http.StatusInternalServerError,
 			"message": result.Error,

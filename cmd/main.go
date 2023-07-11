@@ -98,6 +98,7 @@ func main() {
 
 		files.GET("/asset", controller.GetFile)
 		files.POST("/new-files", controller.CreateFiles)
+		files.DELETE("/delete-files", controller.DeleteFile)
 	}
 	/* End Routes */
 

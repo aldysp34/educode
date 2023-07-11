@@ -11,7 +11,7 @@ import (
 var Db *gorm.DB
 
 func Init(connection string) {
-
+	// connection = "root:@/educode?parseTime=true"
 	db, err := gorm.Open(mysql.Open(connection), &gorm.Config{})
 
 	if err != nil {
