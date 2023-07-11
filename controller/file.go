@@ -1,8 +1,10 @@
 package controller
 
 import (
+	"fmt"
 	"io/ioutil"
 	"net/http"
+	"os"
 	"strconv"
 	"strings"
 	"time"
@@ -116,4 +118,25 @@ func GetFile(c echo.Context) error {
 	fileLocate := c.QueryParam("path")
 
 	return c.File(fileLocate)
+}
+
+func DeleteFile(c echo.Context) error {
+	path := c.QueryParam("path")
+
+	if result := database.Db.Delete(&models.FileContent{Filepath: path}); result.Error != nil {
+		return c.JSON(http.StatusInternalServerError, echo.Map{
+			"status":  http.StatusInternalServerError,
+			"message": result.Error,
+		})
+	}
+
+	err := os.RemoveAll(path)
+	if err != nil {
+		fmt.Println("Error Removing file from path ", path)
+	}
+
+	return c.JSON(http.StatusNoContent, echo.Map{
+		"status":  http.StatusNoContent,
+		"message": "Delete File Successfully",
+	})
 }
